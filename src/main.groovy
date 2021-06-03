@@ -12,9 +12,9 @@ dir.eachFileRecurse (FileType.FILES) { file ->
     def messagesNumber = 0
     file.eachLine {line ->
         if (line.contains(pattern)){
-            def message = line.split("\\{")[1]
-            println "{${message}"
-            outputFile.append("{${message}\n")
+            def message = line.split("\\{")[1].split("}")[0]
+            //println "{${message}}"
+            outputFile.append("{${message}}\n")
             messagesNumber++
         }
     }
