@@ -1,6 +1,6 @@
 import groovy.io.FileType
 
-def pattern = '{"bucket'
+def pattern = 'Sending message'
 def dir = new File("../src/resources/")
 
 dir.eachFileRecurse (FileType.FILES) { file ->
